@@ -1,0 +1,205 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#map-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;  /* Permite posicionar elementos dentro del contenedor */
+    overflow: hidden;
+}
+
+#map {
+    width: 1920px;
+    height: 1080px;
+    object-fit: cover;
+}
+
+/* Estilo del ícono de ubicación */
+#location-icon {
+    width: 150px;  /* Ajusta el tamaño del ícono */
+    height: 150px; /* Ajusta el tamaño del ícono */
+    position: absolute;  /* Posiciona el ícono de forma relativa al contenedor */
+    left: 510px;  /* Ajusta este valor según la posición deseada en el eje X */
+    top: 10px;   /* Ajusta este valor según la posición deseada en el eje Y */
+    cursor: pointer;  /* Cambia el cursor cuando pasa sobre el ícono */
+}
+
+/* Estilo del segundo ícono de ubicación (inicialmente oculto) */
+#locationmapa2 {
+    width: 150px;  /* Ajusta el tamaño del ícono */
+    height: 150px; /* Ajusta el tamaño del ícono */
+    position: absolute;  /* Posiciona el ícono de forma relativa al contenedor */
+    left: 1220px;  /* Ajusta este valor según la posición deseada en el eje X */
+    top: 100px;   /* Ajusta este valor según la posición deseada en el eje Y */
+    cursor: pointer;  /* Cambia el cursor cuando pasa sobre el ícono */
+    display: none; /* Ocultar por defecto */
+}
+
+/* Estilo del cuadro de información */
+#info-box {
+    position: absolute;
+    left: 650px; /* Ajusta este valor según la posición deseada del cuadro en el eje X */
+    top: 50px;  /* Ajusta este valor según la posición deseada del cuadro en el eje Y */
+    background-color: rgba(255, 0, 0, 0.5);  /* Color rojo con 50% de opacidad */
+    border-radius: 15px;  /* Bordes curvos */
+    padding: 10px;  /* Espacio interno del cuadro */
+    font-size: 50px;  /* Tamaño de la letra */
+    color: white;  /* Color del texto */
+    font-weight: 700; /* Estilo de letra en bold 700 */
+    display: none;  /* Ocultar por defecto */
+}
+
+/* Estilo del overlay que aparece al cargar la página */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;  /* Asegura que esté por encima de todo lo demás */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fondo negro semitransparente */
+#overlay-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);  /* Fondo negro con 80% de opacidad */
+}
+
+/* Imagen de Gabriel García Márquez */
+#gabriel-image {
+    position: relative;
+    width: 500px;  /* Ajusta el tamaño de la imagen */
+    height: auto;
+    z-index: 1001;  /* Asegura que esté por encima del fondo */
+    margin-bottom: 20px;  /* Espacio debajo de la imagen */
+}
+
+/* Cuadro rojo con el texto */
+#intro-box {
+    position: relative;
+    background-color: rgba(255, 0, 0, 0.5);  /* Color rojo con 50% de opacidad */
+    border-radius: 15px;  /* Bordes curvos */
+    padding: 20px;  /* Espacio interno del cuadro */
+    max-width: 900px;  /* Ancho máximo del cuadro */
+    color: white;  /* Color del texto */
+    font-size: 30px;  /* Tamaño de la letra */
+    font-weight: 700; /* Estilo de letra en bold 700 */
+    z-index: 1001;  /* Asegura que esté por encima del fondo */
+}
+
+/* Estilo del botón de continuar */
+#continue-button {
+    padding: 15px 30px;  /* Espacio interno del botón */
+    background-color: red;  /* Cambiado a color rojo */
+    color: white;  /* Texto blanco */
+    border: none;  /* Sin bordes */
+    border-radius: 10px;  /* Bordes curvos */
+    font-size: 20px;  /* Tamaño del texto */
+    font-weight: 700; /* Estilo de letra en bold 700 */
+    cursor: pointer;  /* Cambia el cursor cuando pasa sobre el botón */
+    z-index: 1001;  /* Asegura que esté por encima del fondo */
+    position: absolute;
+    left: 60%; /* Ajuste de la posición horizontal */
+    top: 68%; /* Baja la posición vertical del botón */
+    transform: translateX(-50%); /* Ajuste fino para centrar el botón */
+}
+
+#continue-button:hover {
+    background-color: darkred;  /* Cambia el color del fondo al pasar el cursor */
+}
+
+/* Estilo del botón de regresar */
+#back-button {
+    position: absolute;
+    top: 20px;  /* Posición en la parte superior */
+    left: 20px;  /* Posición en la parte izquierda */
+    padding: 10px 20px;  /* Espacio interno del botón */
+    background-color: red;  /* Color de fondo rojo */
+    color: white;  /* Texto blanco */
+    border: none;  /* Sin bordes */
+    border-radius: 10px;  /* Bordes curvos */
+    font-size: 20px;  /* Tamaño del texto */
+    font-weight: 700; /* Estilo de letra en bold 700 */
+    cursor: pointer;  /* Cambia el cursor cuando pasa sobre el botón */
+    z-index: 1001;  /* Asegura que esté por encima del fondo */
+    display: none;  /* Oculto inicialmente */
+}
+
+#back-button:hover {
+    background-color: darkred;  /* Cambia el color al pasar el cursor */
+}
+
+/* Estilo del cuadro de texto para el locationmapa2 */
+#info-box-map2 {
+    position: absolute;
+    left: 50px; /* Ajusta este valor según la posición deseada del cuadro en el eje X */
+    top: 200px;  /* Ajusta este valor según la posición deseada del cuadro en el eje Y */
+    background-color: rgba(255, 0, 0, 0.5);  /* Color rojo con 50% de opacidad */
+    border-radius: 15px;  /* Bordes curvos */
+    padding: 20px;  /* Espacio interno del cuadro */
+    font-size: 25px;  /* Tamaño de la letra */
+    color: white;  /* Color del texto */
+    font-weight: 700; /* Estilo de letra en bold 700 */
+    display: none;  /* Ocultar por defecto */
+    z-index: 1001;  /* Asegura que esté por encima del fondo */
+    max-width: 800px; /* Limita el ancho del cuadro */
+}
+
+/* Estilo del botón de cerrar dentro del cuadro rojo */
+#close-info-box-map2 {
+    position: absolute;
+    top: 10px;  /* Ajusta según la posición deseada dentro del cuadro */
+    right: 10px;  /* Ajusta según la posición deseada dentro del cuadro */
+    background-color: transparent;  /* Sin fondo */
+    color: white;  /* Texto blanco */
+    border: none;  /* Sin bordes */
+    font-size: 24px;  /* Tamaño del texto */
+    font-weight: bold;  /* Estilo de letra en negrita */
+    cursor: pointer;  /* Cambia el cursor cuando pasa sobre el botón */
+    z-index: 1002;  /* Asegura que esté por encima del fondo */
+}
+
+#close-info-box-map2:hover {
+    color: red;  /* Cambia el color al pasar el cursor */
+}
+
+/* Estilo del cuadro de texto para la carta */
+#letter-box {
+    position: absolute;
+    left: 50px; /* Ajusta este valor según la posición deseada del cuadro en el eje X */
+    top: 200px;  /* Ajusta este valor según la posición deseada del cuadro en el eje Y */
+    background-color: rgba(255, 0, 0, 0.5);  /* Color rojo con 50% de opacidad */
+    border-radius: 15px;  /* Bordes curvos */
+    padding: 20px;  /* Espacio interno del cuadro */
+    font-size: 25px;  /* Tamaño de la letra */
+    color: white;  /* Color del texto */
+    font-weight: 700; /* Estilo de letra en bold 700 */
+    display: none;  /* Ocultar por defecto */
+    z-index: 1003;  /* Asegura que esté por encima del fondo */
+    max-width: 800px; /* Limita el ancho del cuadro */
+}
+
+/* Estilo del reproductor de audio */
+#audio-player {
+    position: absolute;
+    left: 50px; /* Ajusta este valor según la posición deseada */
+    top: 400px; /* Ajusta este valor según la posición deseada */
+    z-index: 1004;  /* Asegura que esté por encima del fondo */
+    width: 300px; /* Ancho del reproductor */
+    display: none; /* Ocultar por defecto */
+}
