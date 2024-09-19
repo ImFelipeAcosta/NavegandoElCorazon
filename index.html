@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mapa Interactivo - El Amor en los Tiempos del Cólera</title>
     <link rel="stylesheet" href="Inicio.css">
+    <!-- Incluye Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Contenedor principal del mapa -->
@@ -17,13 +19,15 @@
         <img src="location.svg" alt="Ubicación Mapa 2" id="locationmapa2">
         <!-- Cuadro rojo con el texto que aparecerá al hacer clic en el ícono -->
         <div id="info-box">CIUDAD DE BOLÍVAR</div>
+        <!-- Cuadro rojo con el texto que aparecerá para el segundo ícono al hacer hover -->
+        <div id="info-box-map2-small" style="display: none;">PLAZA DE LA ADUANA</div>
     </div>
 
     <!-- Contenedor del overlay que aparece al cargar la página -->
     <div id="overlay">
         <!-- Fondo negro semitransparente -->
         <div id="overlay-background"></div>
-        <!-- Imagen de Gabriel -->
+        <!-- Imagen de Gabriel García Márquez -->
         <img src="Gabriel.png" alt="Gabriel García Márquez" id="gabriel-image">
         <!-- Cuadro rojo con el texto -->
         <div id="intro-box">
@@ -33,8 +37,11 @@
         <button id="continue-button">Continuar</button>
     </div>
 
-    <!-- Reproductor de audio para la carta -->
-    <audio id="audio-player" controls style="display: none;">
+    <!-- Imagen Gabriel2 que se mostrará en el segundo mapa -->
+    <img src="Gabriel2.png" alt="Gabriel García Márquez" id="gabriel2-image" style="display:none;">
+
+    <!-- Reproductor de audio oculto -->
+    <audio id="audio-player" style="display: none;">
         <source src="Carta1.mp3" type="audio/mp3">
         Your browser does not support the audio element.
     </audio>
