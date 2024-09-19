@@ -1,0 +1,408 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+#map-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#map {
+    width: 1920px;
+    height: 1080px;
+    object-fit: cover;
+}
+
+/* Estilo del Ã­cono de ubicaciÃ³n */
+#location-icon {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 510px;
+    top: 10px;
+    cursor: pointer;
+}
+
+/* Estilo del segundo Ã­cono de ubicaciÃ³n (inicialmente oculto) */
+#locationmapa2 {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 1360px;
+    top: 170px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilo del cuadro de informaciÃ³n */
+#info-box {
+    position: absolute;
+    left: 650px;
+    top: 50px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+    display: none;
+}
+
+/* Estilo del overlay que aparece al cargar la pÃ¡gina */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Fondo negro semitransparente */
+#overlay-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Imagen de Gabriel GarcÃ­a MÃ¡rquez */
+#gabriel-image {
+    position: relative;
+    width: 500px;
+    height: auto;
+    z-index: 1001;
+    margin-bottom: 20px;
+}
+
+/* Cuadro rojo con el texto */
+#intro-box {
+    position: relative;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 900px;
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    z-index: 1001;
+}
+
+/* Estilo del botÃ³n de continuar */
+#continue-button {
+    padding: 15px 30px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 1001;
+    position: absolute;
+    left: 60%;
+    top: 68%;
+    transform: translateX(-50%);
+}
+
+#continue-button:hover {
+    background-color: darkred;
+}
+
+/* Estilo del botÃ³n de regresar */
+#back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    background-color: black; /* Cambiado de rojo a negro */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 1001;
+    display: none;
+}
+
+#back-button i {
+    color: #ffffff;
+}
+
+#back-button:hover {
+    background-color: darkgray; /* Cambia a gris oscuro al pasar el mouse */
+}
+
+/* Estilo del cuadro de texto para el locationmapa2 */
+#info-box-map2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    border-radius: 15px;
+    padding: 20px;
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+    display: none;
+    z-index: 1001;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Estilo del botÃ³n de cerrar dentro del cuadro rojo */
+#close-info-box-map2 {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1002;
+}
+
+#close-info-box-map2:hover {
+    color: red;
+}
+
+/* Estilo del botÃ³n de "Ver carta" */
+#view-letter-button {
+    position: absolute;
+    left: calc(50% - 420px);
+    top: calc(50% + 110px);
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: none;
+    z-index: 1001;
+}
+
+#view-letter-button:hover {
+    background-color: darkred;
+}
+
+/* Estilo del cuadro de texto para la carta */
+#letter-box {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    border-radius: 15px;
+    padding: 30px 40px; /* Espacio interno para el contenido */
+    font-size: 25px;
+    color: white;
+    font-weight: 700;
+    display: none;
+    z-index: 1003;
+    width: 90%; /* Ajusta el ancho para que ocupe mÃ¡s espacio horizontal */
+    max-width: 800px; /* Aumenta el valor mÃ¡ximo del ancho */
+    height: auto; /* Ajuste para que el contenido se ajuste correctamente */
+    text-align: center;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaÃ±o total */
+}
+
+/* Estilo del botÃ³n de cerrar dentro del cuadro de la carta */
+#close-letter-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1004;
+}
+
+#close-letter-box:hover {
+    color: red;
+}
+
+/* Estilo del botÃ³n de regresar dentro del cuadro de la carta */
+#back-to-info-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1004;
+}
+
+#back-to-info-box i {
+    color: #ffffff;
+}
+
+#back-to-info-box:hover {
+    color: red;
+}
+
+/* Estilo de la imagen Gabriel2 */
+#gabriel2-image {
+    position: absolute;
+    left: 220px;
+    top: 250px;
+    width: 400px;
+    height: auto;
+    z-index: 1002;
+    display: none;
+}
+
+/* Controles personalizados para el reproductor de audio */
+#custom-audio-controls {
+    margin-top: 10px; /* Espacio entre la barra de progreso y los botones de control */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Espacio reducido entre los botones */
+    width: 100%; /* AsegÃºrate de que ocupe todo el ancho del cuadro */
+    position: relative;
+    z-index: 1005;
+    display: none; /* Inicialmente oculto */
+}
+
+#custom-audio-controls button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+    color: black; /* Color de los iconos */
+}
+
+#custom-audio-controls button i {
+    font-size: 28px; /* Ajusta el tamaÃ±o de los iconos */
+}
+
+#custom-audio-controls button:hover {
+    transform: scale(1.2); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+#progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px; /* Espacio entre el texto de la carta y la barra de progreso */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    color: #ffffff; /* Color de los tiempos */
+    height: 30px; /* Altura de la barra de progreso y los nÃºmeros */
+}
+
+#progress-bar {
+    appearance: none;
+    width: 70%; /* Ajusta el ancho de la barra de progreso */
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#progress-bar::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: lightgray;
+}
+
+#progress-bar::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    background: lightgray;
+}
+
+#progress-bar::-ms-track {
+    width: 100%;
+    height: 5px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+#progress-bar::-webkit-slider-thumb {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: red; /* Cambia la manija a color rojo */
+    border-radius: 50%;
+    margin-top: -5px;
+}
+
+#progress-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: red; /* Cambia la manija a color rojo */
+    border-radius: 50%;
+}
+
+#progress-bar::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background: red; /* Cambia la manija a color rojo */
+    border-radius: 50%;
+}
+
+#current-time, #duration-time {
+    font-size: 20px; /* Ajusta el tamaÃ±o de la fuente para que se vea claramente */
+    color: #ffffff; /* Asegura que los nÃºmeros sean visibles */
+}
+
+/* Estilo de la imagen Florentino */
+#florentino-image {
+    position: absolute;
+    width: 300px;  /* Ajusta el tamaÃ±o segÃºn lo necesario */
+    height: auto;
+    z-index: 1004; /* Asegura que la imagen estÃ© por encima del cuadro de la carta */
+    display: none; /* Inicialmente oculta */
+    
+    /* Ajustes de posiciÃ³n manuales */
+    left: 660px;  /* Cambia este valor para mover la imagen a la izquierda o derecha */
+    top: 80px;  /* Cambia este valor para mover la imagen hacia arriba o abajo */
+}
+/* Estilo del cuadro de informaciÃ³n para Plaza de la Aduana */
+#info-box-aduana {
+    position: absolute;
+    left: 1360px;  /* Ajusta segÃºn las coordenadas deseadas */
+    top: 100px;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+    display: none; /* Inicialmente oculto */
+    z-index: 1002;
+}
+#info-box-map2-small {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.5);
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 50px;
+    color: white;
+    font-weight: 700;
+    z-index: 1001;
+}
