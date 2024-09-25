@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploración de Gabriel García Márquez</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="overlay"></div>
+
+    <div class="main-container">
+        <div class="content-wrapper">
+            <img id="gabriel" src="Gabriel.png" alt="Gabriel García Márquez">
+            <div class="text-button-wrapper">
+                <div class="text-box">
+                    <p>En algún lugar del Caribe, en un tiempo donde el amor desafiaba al tiempo, comienza una historia que transciende las edades. Soy Gabriel García Márquez, y los invito a explorar los escenarios de *El Amor en los Tiempos del Cólera*. Aquí, en estos lugares, el amor floreció y se desvaneció, pero nunca murió. Acompáñenme en este viaje por los rincones de una ciudad antigua, donde el amor dejó su marca indeleble, y descubran cómo, a pesar del paso del tiempo, algunos sentimientos nunca desaparecen.</p>
+                </div>
+                <div class="button-container">
+                    <button id="continue-btn">CONTINUAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="locaciones-container"></div>
+
+    <div id="content-plaza" class="content-plaza">
+        <img id="gabriel2" alt="Gabriel explicando">
+        <div class="plaza-text-box">
+            <p id="plaza-text"></p>
+            <button id="ver-carta-btn">Ver carta</button>
+            <button id="cerrar-btn" class="cerrar-btn">X</button>
+        </div>
+    </div>
+
+    <div id="carta-container" class="content-plaza" style="display:none;">
+        <button id="volver-plaza-btn" class="back-btn"><i class="fa-solid fa-arrow-left" style="color: #ffffff;"></i></button>
+        <img id="florentino-img" alt="Florentino Ariza">
+        <div class="plaza-text-box">
+            <p id="carta-text"></p>
+            <div class="minimal-audio-player">
+                <input type="range" id="seek-bar" min="0" value="0" step="1">
+                <button id="play-btn" class="audio-btn">⏵</button>
+                <button id="pause-btn" class="audio-btn" style="display:none;">⏸</button>
+                <span id="current-time">0:00</span> / <span id="total-time">0:00</span>
+            </div>
+            <audio id="carta-audio" src="Carta1.mp3"></audio>            
+        </div>
+    </div>
+
+    <audio id="plaza-audio" loop></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
