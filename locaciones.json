@@ -1,0 +1,311 @@
+{
+  "locaciones": [
+    {
+      "nombre": "CIUDAD DE BOLÍVAR",
+      "imagen": "locacion.png",
+      "coordenadas": {
+        "x": 1240,
+        "y": 450
+      },
+      "mapa": 1
+    },
+    {
+      "nombre": "HACIENDA",
+      "imagen": "locacion.png",
+      "coordenadas": {
+        "x": 380,
+        "y": 280
+      },
+      "mapa": 1
+    },
+    {
+      "nombre": "RÍO MAGDALENA",
+      "imagen": "locacion.png",
+      "coordenadas": {
+        "x": 340,
+        "y": 670
+      },
+      "mapa": 1
+    },
+    {
+      "nombre": "PLAZA DE LA ADUANA",
+      "imagen": "locacion1.png",
+      "coordenadas": {
+        "x": 1265,
+        "y": 160
+      },
+      "mapa": 2,
+      "contenido": {
+        "texto": "Aquí, en la bulliciosa Plaza de la Aduana, un joven llamado Florentino Ariza vio por primera vez a Fermina Daza. Este encuentro, fugaz y aparentemente trivial, se convertiría en el origen de un amor que marcaría sus vidas para siempre. Para Florentino, fue amor a primera vista, un amor que no conocía límites ni razón, y que lo llevó a expresar sus sentimientos en palabras cuidadosamente elegidas.",
+        "imagen": "Gabriel2.gif",
+        "audio": "Plaza aduana.mp3",
+        "carta": {
+          "texto": "Señorita Fermina Daza, desde el día en que la vi, mi corazón no ha conocido descanso. Cada latido es un recordatorio de su belleza, y cada suspiro, un anhelo de su presencia. No pido más que una oportunidad para demostrarle la sinceridad de mi afecto, y que mi amor por usted es eterno. Su devoto, Florentino Ariza.",
+          "imagenes": [
+            "Plaza1.jpg",
+            "Plaza2.jpg",
+            "Plaza3.jpg",
+            "Plaza4.jpg",
+            "Plaza5.jpg",
+            "Plaza6.jpg"
+          ],
+          "audio": "Carta1.mp3"
+        }
+      }
+    },
+    {
+      "nombre": "CASA DE FERMINA",
+      "imagen": "locacion2.png",
+      "coordenadas": {
+        "x": 350,
+        "y": 170
+      },
+      "mapa": 2,
+      "contenido": {
+        "texto": "Fermina, con la inocencia de la juventud, recibió la carta de Florentino con una mezcla de sorpresa y curiosidad. Aunque sus palabras eran profundas, casi demasiado para su corta edad, algo en su interior se conmovió. Decidió responder, aunque sus propios sentimientos aún eran un misterio para ella.",
+        "imagen": "Gabriel2.gif",
+        "audio": "Casafermina.mp3",
+        "carta": {
+          "texto": "Señor Florentino Ariza, agradezco sus palabras amables, aunque me sorprenden. Soy una mujer joven, apenas conocedora del mundo, y sus sentimientos me halagan, pero también me desconciertan. Le ruego paciencia, pues mi corazón aún no sabe lo que quiere. Fermina Daza.",
+          "imagenes": [
+            "Fermina1.jpg",
+            "Fermina2.jpg",
+            "Fermina3.jpg",
+            "Fermina4.jpg",
+            "Fermina5.jpg",
+            "Fermina6.jpg"
+          ],
+          "audio": "Carta2.mp3"
+        }
+      }
+    },
+    {
+      "nombre": "CASA DE FLORENTINO",
+      "imagen": "locacion3.png",
+      "coordenadas": {
+        "x": 1410,
+        "y": 350
+      },
+      "mapa": 2,
+      "contenido": {
+        "texto": "Para Florentino, cada carta de Fermina era un faro en la oscuridad. Aislado en su pequeña habitación, rodeado de libros y recuerdos, escribía cartas interminables que no siempre se atrevía a enviar. Eran cartas llenas de pasión, de deseos no cumplidos, y de una espera que parecía interminable.",
+        "imagen": "Gabriel2.gif",
+        "audio": "Casaflorentino.mp3",
+        "carta": {
+          "texto": "Querida Fermina, cada día que pasa sin verte es un tormento que mi alma apenas puede soportar. Me debato entre la desesperación y la esperanza, y en la soledad de mi habitación, sólo tus cartas me mantienen vivo. Si supieras cuánto te amo, no me pedirías paciencia. Tu eterno servidor, Florentino.",
+          "imagenes": [
+            "Florentino1.jpg",
+            "Florentino2.jpg",
+            "Florentino3.jpg",
+            "Florentino4.jpg",
+            "Florentino5.jpg",
+            "Florentino6.jpg"
+          ],
+          "audio": "Carta3.mp3"
+        }
+      }
+    },
+    {
+      "nombre": "CLUB SOCIAL",
+      "imagen": "locacion7.png",
+      "coordenadas": {
+        "x": 1275,
+        "y": 510
+      },
+      "mapa": 3,
+      "contenido": {
+        "texto": "Años más tarde, el destino volvió a cruzar los caminos de Fermina y Florentino. En el ambiente refinado del Club Social, donde las apariencias lo eran todo, ambos intentaron ocultar lo que realmente sentían. Pero la verdad estaba ahí, en cada mirada furtiva, en cada suspiro contenido.",
+        "imagen": "Gabriel2.gif",
+        "audio": "Clubsocial.mp3",
+        "carta": {
+          "texto": "Fermina, verte de nuevo ha despertado en mí todo lo que creía dormido. No hay amor en mi vida más grande que el que siento por ti, y no importa cuánto tiempo pase, seguiré esperando el día en que nuestros destinos se unan de nuevo.",
+          "imagenes": [
+            "Club1.png",
+            "Club2.png",
+            "Club3.png"
+          ],
+          "audio": "Cartaclub.mp3"
+        }
+      }
+    },
+    {
+      "nombre": "HOSPITAL DE LA MISERICORDIA",
+      "imagen": "locacion6.png",
+      "coordenadas": {
+        "x": 240,
+        "y": 680
+      },
+      "mapa": 3,
+      "contenido": {
+        "texto": "La vida de Fermina al lado de Juvenal Urbino fue tranquila y respetable, pero carecía de la pasión que alguna vez sintió por Florentino. En el Hospital de la Misericordia, donde Urbino dedicaba su vida a los enfermos, Fermina reflexionaba sobre lo que significaba realmente el amor y si alguna vez lo había sentido de verdad.",
+        "imagen": "Gabriel2.gif",
+        "audio": "Hospital.mp3",
+        "carta": {
+          "texto": "Juvenal fue un hombre bueno, un esposo que me ofreció una vida digna. Pero en mi corazón, siempre sentí que había algo más, algo que nunca encontré en nuestro hogar. Tal vez fue el precio de una elección que hice por seguridad, no por amor.",
+          "imagenes": [
+            "Hospital1.png",
+            "Hospital2.png",
+            "Hospital3.png"
+          ],
+          "audio": "Cartahospital.mp3"
+        }
+      }
+    },
+    {
+      "nombre": "CEMENTERIO UNIVERSAL",
+      "imagen": "locacion9.png",
+      "coordenadas": {
+        "x": 1250,
+        "y": 1
+      },
+      "mapa": 3,
+      "contenido": {
+        "texto": "En el Cementerio Universal, Fermina enfrentó una de las pruebas más difíciles de su vida: despedirse de Juvenal Urbino, el hombre que la acompañó durante décadas. Pero mientras se despedía de él, un capítulo del pasado volvió a abrirse. Florentino, siempre en la sombra, decidió que era el momento de revelarse.",
+        "imagen": "Gabriel2.gif",
+        "audio": "Cementerio.mp3",
+        "carta": {
+          "texto": "Fermina, ahora que la vida te ha dejado sin el compañero que elegiste, me atrevo a decirte lo que he sentido durante más de cincuenta años. Nunca dejé de amarte, y ahora, en esta etapa de nuestras vidas, estoy dispuesto a mostrarte cuánto te he esperado.",
+          "imagenes": [
+            "Cementerio1.png",
+            "Cementerio2.png",
+            "Cementerio3.png",
+            "Cementerio4.png",
+            "Cementerio5.png"
+          ],
+          "audio": "Cartacementerio.mp3"
+        }
+      }
+    },
+    {
+      "nombre": "HACIENDA DE LORENZO DAZA",
+      "imagen": "locacion5.png",
+      "coordenadas": {
+        "x": 960,
+        "y": 480
+      },
+      "mapa": 4,
+      "contenido": {
+        "texto": "La hacienda, lejos del bullicio de la ciudad, parecía el lugar perfecto para que Fermina olvidara a Florentino. Al menos, eso creía su padre. Sin embargo, en la soledad de esos vastos campos, Fermina descubrió que olvidar no era tan fácil. Las cartas de Florentino la seguían atormentando, alimentando un fuego que ella misma no podía apagar.",
+        "imagen": "Gabriel2.gif",
+        "audio": "Hacienda.mp3",
+        "carta": {
+          "texto": "Florentino, he recibido todas tus cartas, y cada una de ellas me recuerda lo que podría haber sido. Pero en este lugar, lejos de ti, he llegado a comprender que lo nuestro no fue más que una ilusión. Sin embargo, es una ilusión que atesoro en lo más profundo de mi ser.",
+          "imagenes": [
+            "Hacienda1.png",
+            "Hacienda2.png",
+            "Hacienda3.png",
+            "Hacienda4.png",
+            "Hacienda5.png",
+            "Hacienda6.png"
+          ],
+          "audio": "Cartahacienda.mp3"
+        }
+      }
+    },
+    {
+      "nombre": "LA CASA DE HILDEBRANDA SÁNCHEZ",
+      "imagen": "locacion8.png",
+      "coordenadas": {
+        "x": 600,
+        "y": 85
+      },
+      "mapa": 4,
+      "contenido": {
+        "texto": "En los momentos más difíciles, Fermina encontró un refugio en su prima Hildebranda. Sus conversaciones, llenas de confidencias y recuerdos, la ayudaron a navegar las aguas turbulentas de su vida. Hildebranda, siempre dispuesta a escuchar, fue un pilar en el que Fermina se apoyó cuando todo parecía derrumbarse.",
+        "imagen": "Gabriel2.gif",
+        "audio": "Casahildebranda.mp3",
+        "carta": {
+          "texto": "Hildebranda, a veces me pregunto si habría sido más feliz si hubiera seguido mi corazón en lugar de mi razón. Pero entonces recuerdo que la vida no es tan sencilla, y que cada elección que hice me llevó a donde estoy ahora. Aún así, siempre queda en mí la sombra de la duda.",
+          "imagenes": [
+            "Hildebranda1.png",
+            "Hildebranda2.png",
+            "Hildebranda3.png",
+            "Hildebranda4.png",
+            "Hildebranda5.png",
+            "Hildebranda6.png"
+          ],
+          "audio": "Cartahildebranda.mp3"
+        }
+      }
+    },
+    {
+      "nombre": "BARCO 1",
+      "imagen": "locacion4.png",
+      "coordenadas": {
+        "x": 760,
+        "y": 590
+      },
+      "mapa": 5,
+      "contenido": {
+        "texto": "En ese viaje por el río Magdalena, el joven Florentino Ariza experimentó algo nuevo, algo que, aunque fugaz, lo marcaría para siempre. A bordo de un viejo vapor, mientras el río serpenteaba entre selvas y montañas, descubrió que el deseo podía ser tan poderoso como el amor que idealizaba. Allí, en la inmensidad del río, aprendió que la soledad tiene formas inesperadas de compañía.",
+        "imagen": "Gabriel2.gif",
+        "audio": "barco.mp3",
+        "carta": {
+          "texto": "12 de junio, medianoche. El río murmuraba al compás de mi corazón cuando ella apareció. No sé su nombre, pero su risa quedó grabada como una melodía. En sus ojos vi la promesa de un momento que no duraría, pero que sería mío para siempre. Esa noche, el río fue más que testigo: fue guardián de un secreto eterno.",
+          "imagenes": [
+            "barco1.png",
+            "barco2.png",
+            "barco3.png",
+            "barco4.png",
+            "barco5.png",
+            "barco6.png",
+            "barco7.png"
+          ],
+          "audio": "Cartabarco.mp3"
+        }
+      }
+    },
+    {
+      "nombre": "BARCO 2",
+      "imagen": "locacion10.png",
+      "coordenadas": {
+        "x": 1070,
+        "y": 500
+      },
+      "mapa": 5,
+      "contenido": {
+        "texto": "El viaje por el río Magdalena fue más que un simple recorrido; fue una travesía hacia la redención, el perdón y la aceptación. A bordo del Nueva Fidelidad, Florentino y Fermina se enfrentaron a los fantasmas de su pasado, mientras navegaban por un río que, como su amor, parecía no tener fin.",
+        "imagen": "Gabriel2.gif",
+        "audio": "Rio.mp3",
+        "carta": {
+          "texto": "Querida Fermina, este río ha sido testigo de nuestras vidas, tan distantes y a la vez tan unidas. Te he amado en silencio, a través de los años, y ahora que estás a mi lado, temo que un día despertarás y te darás cuenta de que el tiempo ha pasado demasiado rápido. Pero hasta entonces, viviré cada momento como si fuera el último. Florentino.",
+          "imagenes": [
+            "rio1.png",
+            "rio2.png",
+            "rio3.png",
+            "rio4.png",
+            "rio5.png",
+            "rio6.png"
+          ],
+          "audio": "Cartario.mp3"
+        }
+      }
+    },
+    {
+      "nombre": "FINAL",
+      "imagen": "locacion11.png",
+      "coordenadas": {
+        "x": 500,
+        "y": 30
+      },
+      "mapa": 5,
+      "contenido": {
+        "texto": "En su última carta, Florentino aceptó todo lo que la vida les había dado y quitado. Reconoció que el amor no era perfecto, que estaba lleno de errores y aciertos. Pero en ese amor imperfecto, encontró la verdad: que a pesar de todo, siempre había estado destinado a estar con Fermina, aunque fuera al final de sus días.",
+        "imagen": "Gabriel2.gif",
+        "audio": "nube.mp3",
+        "carta": {
+          "texto": "Fermina, después de todo lo que hemos pasado, ahora sé que te amaría de nuevo, con todos los errores y aciertos que nos han traído hasta aquí. No importa lo que el futuro nos depare, siempre te amaré, porque en el fondo de mi alma, tú siempre has estado allí. Tu Florentino.",
+          "imagenes": [
+            "nube1.png",
+            "nube2.png",
+            "nube3.png",
+            "nube4.png",
+            "nube5.png",
+            "nube6.png"
+          ],
+          "audio": "Cartanube.mp3"
+        }
+      }
+    }
+  ]
+}
