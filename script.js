@@ -346,7 +346,7 @@ document.getElementById('ver-carta-btn').addEventListener('click', function () {
       cartaContent.imagenes.forEach((imagenSrc, index) => {
         const imgElement = document.createElement('img');
         imgElement.src = imagenSrc;
-        imgElement.alt = `Imagen ${index + 1} de la carta`;
+        imgElement.alt = Imagen ${index + 1} de la carta;
         imgElement.classList.add('carrusel-imagen');
         if (index === 0) {
           imgElement.classList.add('visible');
@@ -386,24 +386,7 @@ document.getElementById('ver-carta-btn').addEventListener('click', function () {
       console.error("Error al cargar las locaciones:", error);
     });
 });
-// Funcionalidad del botón cerrar carta
-document.getElementById('cerrar-carta-btn').addEventListener('click', function () {
-  document.getElementById('carta-container').style.display = 'none'; // Ocultar la carta
-  pauseCartaAudioAndResumePlaza();
 
-  if (document.body.style.backgroundImage.includes('Mapa2.jpg')) {
-    resumeMapa2Audio();
-  } else if (document.body.style.backgroundImage.includes('Mapa3.jpeg')) {
-    resumeMapa3Audio();
-  } else if (document.body.style.backgroundImage.includes('Mapa4.jpeg')) {
-    resumeMapa4Audio();
-  } else if (document.body.style.backgroundImage.includes('Mapa5.png')) {
-    resumeMapa5Audio();
-  } else {
-    resumeMapaAudio();
-  }
-  toggleNavigationButtons(true); // Mostrar los botones al cerrar la carta
-});
 
 // Funcionalidad del botón volver a la plaza
 document.getElementById('back-to-plaza-btn').addEventListener('click', function () {
@@ -462,11 +445,11 @@ cartaAudio.addEventListener('timeupdate', function () {
   const formatTime = (time) => {
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60).toString().padStart(2, '0');
-    return `${minutes}:${seconds}`;
+    return ${minutes}:${seconds};
   };
 
   if (!isNaN(duration)) {
-    audioTime.textContent = `${formatTime(currentTime)} / ${formatTime(duration)}`;
+    audioTime.textContent = ${formatTime(currentTime)} / ${formatTime(duration)};
   }
 });
 cartaAudio.addEventListener('loadedmetadata', function () {
@@ -475,10 +458,10 @@ cartaAudio.addEventListener('loadedmetadata', function () {
     const formatTime = (time) => {
       const minutes = Math.floor(time / 60);
       const seconds = Math.floor(time % 60).toString().padStart(2, '0');
-      return `${minutes}:${seconds}`;
+      return ${minutes}:${seconds};
     };
 
-    audioTime.textContent = `00:00 / ${formatTime(duration)}`;
+    audioTime.textContent = 00:00 / ${formatTime(duration)};
   }
 });
 
@@ -666,7 +649,7 @@ function ensureCorrectButtons() {
 document.addEventListener('DOMContentLoaded', ensureCorrectButtons);
 // Función para ocultar el audio del mapa principal al cambiar a otros mapas
 function handleMapaTransition(newMapa, locacionesToShow, locacionesToHide, pauseAudioFunction, playAudioFunction) {
-  document.body.style.backgroundImage = `url('${newMapa}')`; // Cambiar el fondo al nuevo mapa
+  document.body.style.backgroundImage = url('${newMapa}'); // Cambiar el fondo al nuevo mapa
   locacionesToHide.forEach(loc => loc.style.display = 'none'); // Ocultar locaciones previas
   locacionesToShow.forEach(loc => loc.style.display = 'block'); // Mostrar locaciones nuevas
 
@@ -683,7 +666,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // Función para ajustar los controles de audio y navegación en cada cambio de locación
 function adjustControlsOnLocationChange(mapName, locacionesToHide, locacionesToShow, pauseAudioFunction, playAudioFunction) {
   pauseAudioFunction();
-  document.body.style.backgroundImage = `url('${mapName}')`;
+  document.body.style.backgroundImage = url('${mapName}');
 
   locacionesToHide.forEach(loc => loc.style.display = 'none');
   locacionesToShow.forEach(loc => loc.style.display = 'block');
